@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Joep Janssen - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- dit is de ondergrond -->
+      <a-entity>
+        <!-- dit is de grond waar je op staat -->
+        <a-entity>
+          <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#85e085" visible="false">
+            <a-animation attribute="color" begin="55000" to="#ffff66"></a-animation>
+          </a-plane>
+          <a-plane position="25 0 0" rotation="-90 0 0" width="42" height="100" color="#85e085">
+            <a-animation attribute="color" begin="55000" to="#ffff66"></a-animation>
+          </a-plane>
+          <a-plane position="-25 0 0" rotation="-90 0 0" width="55" height="100" color="#85e085">
+            <a-animation attribute="color" begin="55000" to="#ffff66"></a-animation>
+          </a-plane>
+        </a-entity>
+        <!-- dit is de rivier -->
+        <a-entity>
+          <!-- deze blokken zorgen ervoor dat het lijkt alsof er een inham is -->
+          <a-box position="4.5 -1 0" color="#85e085" depth="100" height="2">
+            <a-animation attribute="color" begin="55000" to="#b3b300"></a-animation>
+          </a-box>
+          <a-box position="2 -1 0" color="#85e085" depth="100" height="2">
+            <a-animation attribute="color" begin="55000" to="#b3b300"></a-animation>
+          </a-box>
+          <a-box position="3 -2 0" color="#85e085" depth="100" width="2.5" >
+            <a-animation attribute="color" begin="55000" to="#b3b300"></a-animation>
+          </a-box>
+          <!-- dit is het water zelf -->
+          <a-box position="3.25 -0.7 0" color="#80ffff" depth="100" height="1" width="1.5">
+            <a-animation attribute="visible" begin="55000" to="false"></a-animation>
+          </a-box>
+        </a-entity>
+      </a-entity>
+
+      <!-- dit is de lucht -->
+      <a-entity>
+        <a-sky color="#33d6ff"></a-sky>
+        <a-animation attribute="color" begin="55000" to="#4d94ff"></a-animation>
+      </a-entity>
+
+
+      <!-- dit is het bos -->
+      <a-entity position='0 1.5 0' visible="true">
+        <!-- dit zorgt ervoor dat de bomen later weg zijn -->
+        <a-animation attribute="visible" begin="24500" to="false"></a-animation>
+        <!-- dit zorgt ervoor dat de bomen omvallen -->
+        <a-animation attribute="position" begin="20000" to="0 0 0"></a-animation>
+        <!-- elk entity is een boom -->
+        <a-entity position="0 0 -8">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="4 0 -5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="6 0 -3">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="9 0 2">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="7 0 4">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="5 0 7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="3 0 8">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="0 0 9">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-5 0 6">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-9 0 5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-9 0 0">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-8 0 -4">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-6 0 -7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="0 0 -9">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="1 0 -9">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="2 0 -7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="2 0 -8">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="2 0 -9">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="3 0 -7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="4 0 -7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="4 0 -6">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="5 0 -6">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="5 0 -5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="6 0 -5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="7 0 -5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="7 0 -4">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="7 0 -3">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="6 0 -2">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="7 0 -1.5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="6.5 0 -1">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="6.5 0 -1.2">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="6.5 0 -0.8">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="7 0 -0">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="8 0 -0.5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="7 0 1">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="7 0 2">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="6.5 0 3">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="6.5 0 2.5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="6 0 4">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="6 0 5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="6 0 6">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="6 0 7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="5 0 7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="4 0 7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="3 0 8">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="3 0 7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="2 0 7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="2 0 8">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="1 0 8">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="0.5 0 8">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="0 0 7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-0.5 0 8">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-2 0 8">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-1 0 7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-2 0 7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-3 0 6">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-2.5 0 6.5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-3 0 5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-4 0 6">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-4.5 0 6">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-5 0 6">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-5.5 0 5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-6 0 6">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-7 0 6">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-7 0 5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-8 0 5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-8 0 5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-7 0 5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-7 0 4">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-7 0 3">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-8 0 3">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-8 0 2">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-9 0 1">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-8 0 1">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-9 0 0">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-9 0 -1">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-9 0 -2">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-9 0 -3">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-8 0 -3">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-8 0 -5">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-8 0 -6">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-7 0 -6">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-7 0 -7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-6 0 -7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-5 0 -7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-4 0 -7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-3 0 -7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-2 0 -7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-1 0 -7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="0 0 -7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="1 0 -7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="2 0 -7">
+          <!-- dit zorgt ervoor dat de boom omvallen -->
+          <a-animation attribute="rotation" begin="20000" duration="500" to="0 0 90"></a-animation>
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5"></a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+      </a-entity>
+
+      <!-- dit zijn de bulldozers -->
+      <a-entity visible="false">
+        <!-- dit zorgt ervoor dat de bulldozers te zien zijn -->
+        <a-animation attribute="visible" begin="19500" to="true"></a-animation>
+        <!-- dit zorgt ervoor dat de bulldozers weer verdwijnen -->
+        <a-animation attribute="visible" begin="25000" to="false"></a-animation>
+        <!-- elk entity is een bulldozer -->
+        <a-entity position="10 0 -10" rotation="0 30 0">
+          <!-- dit zijn de wielen -->
+          <a-box color="grey" width="8" height="2" depth="0.75" position="-0.5 1 0.6"></a-box>
+          <a-box color="grey" width="8" height="2" depth="0.75" position="-0.5 1 -4.6"></a-box>
+          <!-- dit is de machine zelf -->
+          <a-box color="yellow" width="4" height="4" depth="4.5" position="1 2.5 -2"></a-box>
+          <a-box color="yellow" width="3" height="2.5" depth="4.5" position="-2.5 1.75 -2"></a-box>
+          <a-box color="white" width="3.8" height="1.3" depth="0.1" position="1 3.75 0.25"></a-box>
+          <a-box color="white" width="3.8" height="1.3" depth="0.1" position="1 3.75 -4.25"></a-box>
+          <a-box color="white" width="0.1" height="1.3" depth="4.3" position="-1 3.9 -2.25"></a-box>
+          <!-- dit is de grote schep voorop -->
+          <a-box color="yellow" width="2" height="1.5" depth="1" position="-5 1.25 -2"></a-box>
+          <a-box color="yellow" width="0.5" height="3" depth="5" position="-6 1.25 -2"></a-box>
+        </a-entity>
+        <a-entity position="-2 0 -13" rotation="0 70 0">
+          <!-- dit zijn de wielen -->
+          <a-box color="grey" width="8" height="2" depth="0.75" position="-0.5 1 0.6"></a-box>
+          <a-box color="grey" width="8" height="2" depth="0.75" position="-0.5 1 -4.6"></a-box>
+          <!-- dit is de machine zelf -->
+          <a-box color="yellow" width="4" height="4" depth="4.5" position="1 2.5 -2"></a-box>
+          <a-box color="yellow" width="3" height="2.5" depth="4.5" position="-2.5 1.75 -2"></a-box>
+          <a-box color="white" width="3.8" height="1.3" depth="0.1" position="1 3.75 0.25"></a-box>
+          <a-box color="white" width="3.8" height="1.3" depth="0.1" position="1 3.75 -4.25"></a-box>
+          <a-box color="white" width="0.1" height="1.3" depth="4.3" position="-1 3.9 -2.25"></a-box>
+          <!-- dit is de grote schep voorop -->
+          <a-box color="yellow" width="2" height="1.5" depth="1" position="-5 1.25 -2"></a-box>
+          <a-box color="yellow" width="0.5" height="3" depth="5" position="-6 1.25 -2"></a-box>
+        </a-entity>
+        <a-entity position="-13 0 -8" rotation="0 140 0">
+          <!-- dit zijn de wielen -->
+          <a-box color="grey" width="8" height="2" depth="0.75" position="-0.5 1 0.6"></a-box>
+          <a-box color="grey" width="8" height="2" depth="0.75" position="-0.5 1 -4.6"></a-box>
+          <!-- dit is de machine zelf -->
+          <a-box color="yellow" width="4" height="4" depth="4.5" position="1 2.5 -2"></a-box>
+          <a-box color="yellow" width="3" height="2.5" depth="4.5" position="-2.5 1.75 -2"></a-box>
+          <a-box color="white" width="3.8" height="1.3" depth="0.1" position="1 3.75 0.25"></a-box>
+          <a-box color="white" width="3.8" height="1.3" depth="0.1" position="1 3.75 -4.25"></a-box>
+          <a-box color="white" width="0.1" height="1.3" depth="4.3" position="-1 3.9 -2.25"></a-box>
+          <!-- dit is de grote schep voorop -->
+          <a-box color="yellow" width="2" height="1.5" depth="1" position="-5 1.25 -2"></a-box>
+          <a-box color="yellow" width="0.5" height="3" depth="5" position="-6 1.25 -2"></a-box>
+        </a-entity>
+        <a-entity position="-16 0 10" rotation="0 220 0">
+          <!-- dit zijn de wielen -->
+          <a-box color="grey" width="8" height="2" depth="0.75" position="-0.5 1 0.6"></a-box>
+          <a-box color="grey" width="8" height="2" depth="0.75" position="-0.5 1 -4.6"></a-box>
+          <!-- dit is de machine zelf -->
+          <a-box color="yellow" width="4" height="4" depth="4.5" position="1 2.5 -2"></a-box>
+          <a-box color="yellow" width="3" height="2.5" depth="4.5" position="-2.5 1.75 -2"></a-box>
+          <a-box color="white" width="3.8" height="1.3" depth="0.1" position="1 3.75 0.25"></a-box>
+          <a-box color="white" width="3.8" height="1.3" depth="0.1" position="1 3.75 -4.25"></a-box>
+          <a-box color="white" width="0.1" height="1.3" depth="4.3" position="-1 3.9 -2.25"></a-box>
+          <!-- dit is de grote schep voorop -->
+          <a-box color="yellow" width="2" height="1.5" depth="1" position="-5 1.25 -2"></a-box>
+          <a-box color="yellow" width="0.5" height="3" depth="5" position="-6 1.25 -2"></a-box>
+        </a-entity>
+        <a-entity position="-2 0 16" rotation="0 260 0">
+          <!-- dit zijn de wielen -->
+          <a-box color="grey" width="8" height="2" depth="0.75" position="-0.5 1 0.6"></a-box>
+          <a-box color="grey" width="8" height="2" depth="0.75" position="-0.5 1 -4.6"></a-box>
+          <!-- dit is de machine zelf -->
+          <a-box color="yellow" width="4" height="4" depth="4.5" position="1 2.5 -2"></a-box>
+          <a-box color="yellow" width="3" height="2.5" depth="4.5" position="-2.5 1.75 -2"></a-box>
+          <a-box color="white" width="3.8" height="1.3" depth="0.1" position="1 3.75 0.25"></a-box>
+          <a-box color="white" width="3.8" height="1.3" depth="0.1" position="1 3.75 -4.25"></a-box>
+          <a-box color="white" width="0.1" height="1.3" depth="4.3" position="-1 3.9 -2.25"></a-box>
+          <!-- dit is de grote schep voorop -->
+          <a-box color="yellow" width="2" height="1.5" depth="1" position="-5 1.25 -2"></a-box>
+          <a-box color="yellow" width="0.5" height="3" depth="5" position="-6 1.25 -2"></a-box>
+        </a-entity>
+        <a-entity position="14 0 8" rotation="0 330 0">
+          <!-- dit zijn de wielen -->
+          <a-box color="grey" width="8" height="2" depth="0.75" position="-0.5 1 0.6"></a-box>
+          <a-box color="grey" width="8" height="2" depth="0.75" position="-0.5 1 -4.6"></a-box>
+          <!-- dit is de machine zelf -->
+          <a-box color="yellow" width="4" height="4" depth="4.5" position="1 2.5 -2"></a-box>
+          <a-box color="yellow" width="3" height="2.5" depth="4.5" position="-2.5 1.75 -2"></a-box>
+          <a-box color="white" width="3.8" height="1.3" depth="0.1" position="1 3.75 0.25"></a-box>
+          <a-box color="white" width="3.8" height="1.3" depth="0.1" position="1 3.75 -4.25"></a-box>
+          <a-box color="white" width="0.1" height="1.3" depth="4.3" position="-1 3.9 -2.25"></a-box>
+          <!-- dit is de grote schep voorop -->
+          <a-box color="yellow" width="2" height="1.5" depth="1" position="-5 1.25 -2"></a-box>
+          <a-box color="yellow" width="0.5" height="3" depth="5" position="-6 1.25 -2"></a-box>
+        </a-entity>
+      </a-entity>
+
+      <!-- dit is de stofwolk -->
+      <a-entity visible="false">
+        <!-- dit zorgt ervoor dat de stofwolken er komen -->
+        <a-animation attribute="visible" to="true" begin="21000"></a-animation>
+        <!-- dit zorgt ervoor dat de stofwolken weer verdwijnen -->
+        <a-animation attribute="visible" to="false" begin="25000"></a-animation>
+        <!-- elk entity is een stofwolkje -->
+        <a-entity position="0 1 -7">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="-2 1 -7">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="-4 1 -7">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="-6 1 -7">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="-7 1 -5">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="-8 1 -3">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="-8 1 -1">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="-8 1 1">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="-7 1 3">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="-5 1 5">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="-3 1 5">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="-1 1 5">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="1 1 5">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="3 1 3">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="3 1 1">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="3 1 -1">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="3 1 -3">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="3 1 -5">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+        <a-entity position="2 1 -7">
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="100" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="200" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="300" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="400" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box  height="2" width="2" depth="2">
+            <a-animation attribute="rotation" from="0 0 0" to="360 360 360" dur="500" repeat="indefinite"></a-animation>
+          </a-box>
+        </a-entity>
+      </a-entity>
+
+      <!-- dit zijn de huizen en de bomen op de achtergrond nadat het bos weg is -->
+      <a-entity position="0 1.5 0" visible="false">
+        <!-- dit zorgt ervoor dat de huizen tevoorschijn komen -->
+        <a-animation attribute="visible" to="true" begin="23000"></a-animation>
+        <!-- elk entity is een huis -->
+        <a-entity position="-2 0 -20" rotation="0 35 0">
+          <!-- dit is het gewone huis -->
+          <a-box color="#ff1a1a" width="4" height="3" depth="4"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#663300" width="1.5" height="2.5" depth="0.1" position="-1 -0.3 2"></a-box>
+          <!-- dit zijn de ramen -->
+          <a-box color="white" width="2" height="1.7" depth="0.1" position="0.9 0 2"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="2 0 0"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="-2 0 0"></a-box>
+          <a-box color="white" width="3.5" height="2" depth="0.1" position="0 0 -2"></a-box>
+          <!-- dit is het dak -->
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="1.1 2.35 0" rotation="0 0 45"></a-box>
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="-1.1 2.35 0" rotation="0 0 -45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 1.9" rotation="0 0 45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 -1.9" rotation="0 0 45"></a-box>
+        </a-entity>
+        <a-entity position="-12 0 -24" rotation="0 65 0">
+          <!-- dit is het gewone huis -->
+          <a-box color="#ff1a1a" width="4" height="3" depth="4"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#663300" width="1.5" height="2.5" depth="0.1" position="-1 -0.3 2"></a-box>
+          <!-- dit zijn de ramen -->
+          <a-box color="white" width="2" height="1.7" depth="0.1" position="0.9 0 2"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="2 0 0"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="-2 0 0"></a-box>
+          <a-box color="white" width="3.5" height="2" depth="0.1" position="0 0 -2"></a-box>
+          <!-- dit is het dak -->
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="1.1 2.35 0" rotation="0 0 45"></a-box>
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="-1.1 2.35 0" rotation="0 0 -45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 1.9" rotation="0 0 45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 -1.9" rotation="0 0 45"></a-box>
+        </a-entity>
+        <a-entity position="-40 0 0" rotation="0 90 0">
+          <!-- dit is het gewone huis -->
+          <a-box color="#ff1a1a" width="4" height="3" depth="4"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#663300" width="1.5" height="2.5" depth="0.1" position="-1 -0.3 2"></a-box>
+          <!-- dit zijn de ramen -->
+          <a-box color="white" width="2" height="1.7" depth="0.1" position="0.9 0 2"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="2 0 0"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="-2 0 0"></a-box>
+          <a-box color="white" width="3.5" height="2" depth="0.1" position="0 0 -2"></a-box>
+          <!-- dit is het dak -->
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="1.1 2.35 0" rotation="0 0 45"></a-box>
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="-1.1 2.35 0" rotation="0 0 -45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 1.9" rotation="0 0 45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 -1.9" rotation="0 0 45"></a-box>
+        </a-entity>
+        <a-entity position="-35 0 3" rotation="0 110 0">
+          <!-- dit is het gewone huis -->
+          <a-box color="#ff1a1a" width="4" height="3" depth="4"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#663300" width="1.5" height="2.5" depth="0.1" position="-1 -0.3 2"></a-box>
+          <!-- dit zijn de ramen -->
+          <a-box color="white" width="2" height="1.7" depth="0.1" position="0.9 0 2"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="2 0 0"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="-2 0 0"></a-box>
+          <a-box color="white" width="3.5" height="2" depth="0.1" position="0 0 -2"></a-box>
+          <!-- dit is het dak -->
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="1.1 2.35 0" rotation="0 0 45"></a-box>
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="-1.1 2.35 0" rotation="0 0 -45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 1.9" rotation="0 0 45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 -1.9" rotation="0 0 45"></a-box>
+        </a-entity>
+        <a-entity position="-35 0 -3" rotation="0 70 0">
+          <!-- dit is het gewone huis -->
+          <a-box color="#ff1a1a" width="4" height="3" depth="4"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#663300" width="1.5" height="2.5" depth="0.1" position="-1 -0.3 2"></a-box>
+          <!-- dit zijn de ramen -->
+          <a-box color="white" width="2" height="1.7" depth="0.1" position="0.9 0 2"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="2 0 0"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="-2 0 0"></a-box>
+          <a-box color="white" width="3.5" height="2" depth="0.1" position="0 0 -2"></a-box>
+          <!-- dit is het dak -->
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="1.1 2.35 0" rotation="0 0 45"></a-box>
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="-1.1 2.35 0" rotation="0 0 -45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 1.9" rotation="0 0 45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 -1.9" rotation="0 0 45"></a-box>
+        </a-entity>
+        <a-entity position="-35 0 -9" rotation="0 0 0">
+          <!-- dit is het gewone huis -->
+          <a-box color="#ff1a1a" width="4" height="3" depth="4"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#663300" width="1.5" height="2.5" depth="0.1" position="-1 -0.3 2"></a-box>
+          <!-- dit zijn de ramen -->
+          <a-box color="white" width="2" height="1.7" depth="0.1" position="0.9 0 2"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="2 0 0"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="-2 0 0"></a-box>
+          <a-box color="white" width="3.5" height="2" depth="0.1" position="0 0 -2"></a-box>
+          <!-- dit is het dak -->
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="1.1 2.35 0" rotation="0 0 45"></a-box>
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="-1.1 2.35 0" rotation="0 0 -45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 1.9" rotation="0 0 45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 -1.9" rotation="0 0 45"></a-box>
+        </a-entity>
+        <a-entity position="-35 0 9" rotation="0 80 0">
+          <!-- dit is het gewone huis -->
+          <a-box color="#ff1a1a" width="4" height="3" depth="4"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#663300" width="1.5" height="2.5" depth="0.1" position="-1 -0.3 2"></a-box>
+          <!-- dit zijn de ramen -->
+          <a-box color="white" width="2" height="1.7" depth="0.1" position="0.9 0 2"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="2 0 0"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="-2 0 0"></a-box>
+          <a-box color="white" width="3.5" height="2" depth="0.1" position="0 0 -2"></a-box>
+          <!-- dit is het dak -->
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="1.1 2.35 0" rotation="0 0 45"></a-box>
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="-1.1 2.35 0" rotation="0 0 -45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 1.9" rotation="0 0 45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 -1.9" rotation="0 0 45"></a-box>
+        </a-entity>
+        <a-entity position="-30 0 7" rotation="0 110 0">
+          <!-- dit is het gewone huis -->
+          <a-box color="#ff1a1a" width="4" height="3" depth="4"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#663300" width="1.5" height="2.5" depth="0.1" position="-1 -0.3 2"></a-box>
+          <!-- dit zijn de ramen -->
+          <a-box color="white" width="2" height="1.7" depth="0.1" position="0.9 0 2"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="2 0 0"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="-2 0 0"></a-box>
+          <a-box color="white" width="3.5" height="2" depth="0.1" position="0 0 -2"></a-box>
+          <!-- dit is het dak -->
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="1.1 2.35 0" rotation="0 0 45"></a-box>
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="-1.1 2.35 0" rotation="0 0 -45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 1.9" rotation="0 0 45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 -1.9" rotation="0 0 45"></a-box>
+        </a-entity>
+        <a-entity position="12  0 -24" rotation="0 -35 0">
+          <!-- dit is het gewone huis -->
+          <a-box color="#ff1a1a" width="4" height="3" depth="4"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#663300" width="1.5" height="2.5" depth="0.1" position="-1 -0.3 2"></a-box>
+          <!-- dit zijn de ramen -->
+          <a-box color="white" width="2" height="1.7" depth="0.1" position="0.9 0 2"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="2 0 0"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="-2 0 0"></a-box>
+          <a-box color="white" width="3.5" height="2" depth="0.1" position="0 0 -2"></a-box>
+          <!-- dit is het dak -->
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="1.1 2.35 0" rotation="0 0 45"></a-box>
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="-1.1 2.35 0" rotation="0 0 -45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 1.9" rotation="0 0 45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 -1.9" rotation="0 0 45"></a-box>
+        </a-entity>
+        <a-entity position="35 0 -5" rotation="0 -90 0">
+          <!-- dit is het gewone huis -->
+          <a-box color="#ff1a1a" width="4" height="3" depth="4"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#663300" width="1.5" height="2.5" depth="0.1" position="-1 -0.3 2"></a-box>
+          <!-- dit zijn de ramen -->
+          <a-box color="white" width="2" height="1.7" depth="0.1" position="0.9 0 2"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="2 0 0"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="-2 0 0"></a-box>
+          <a-box color="white" width="3.5" height="2" depth="0.1" position="0 0 -2"></a-box>
+          <!-- dit is het dak -->
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="1.1 2.35 0" rotation="0 0 45"></a-box>
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="-1.1 2.35 0" rotation="0 0 -45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 1.9" rotation="0 0 45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 -1.9" rotation="0 0 45"></a-box>
+        </a-entity>
+        <a-entity position="35 0 10" rotation="0 -110 0">
+          <!-- dit is het gewone huis -->
+          <a-box color="#ff1a1a" width="4" height="3" depth="4"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#663300" width="1.5" height="2.5" depth="0.1" position="-1 -0.3 2"></a-box>
+          <!-- dit zijn de ramen -->
+          <a-box color="white" width="2" height="1.7" depth="0.1" position="0.9 0 2"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="2 0 0"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="-2 0 0"></a-box>
+          <a-box color="white" width="3.5" height="2" depth="0.1" position="0 0 -2"></a-box>
+          <!-- dit is het dak -->
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="1.1 2.35 0" rotation="0 0 45"></a-box>
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="-1.1 2.35 0" rotation="0 0 -45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 1.9" rotation="0 0 45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 -1.9" rotation="0 0 45"></a-box>
+        </a-entity>
+        <a-entity position="-2 0 20" rotation="0 120 0">
+          <!-- dit is het gewone huis -->
+          <a-box color="#ff1a1a" width="4" height="3" depth="4"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#663300" width="1.5" height="2.5" depth="0.1" position="-1 -0.3 2"></a-box>
+          <!-- dit zijn de ramen -->
+          <a-box color="white" width="2" height="1.7" depth="0.1" position="0.9 0 2"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="2 0 0"></a-box>
+          <a-box color="white" width="0.1" height="2" depth="3.5" position="-2 0 0"></a-box>
+          <a-box color="white" width="3.5" height="2" depth="0.1" position="0 0 -2"></a-box>
+          <!-- dit is het dak -->
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="1.1 2.35 0" rotation="0 0 45"></a-box>
+          <a-box color="#802b00" width="0.2" height="3.3" depth="4.5" position="-1.1 2.35 0" rotation="0 0 -45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 1.9" rotation="0 0 45"></a-box>
+          <a-box color="#ff1a1a" width="3.1" height="3.1" depth="0.2" position="0 1.25 -1.9" rotation="0 0 45"></a-box>
+        </a-entity>
+        <!-- dit is de flat -->
+        <a-entity position="-25 0 -12" rotation="0 30 0">
+          <!-- dit is de begande ondergrond -->
+          <a-entity>
+            <!-- dit is wat je ziet aan de buitenkant -->
+            <a-box color="#248f24" height="3" width="5" depth="5"></a-box>
+            <!-- dit is de deur -->
+            <a-box color="#663300" height="2.5" width="1.25" depth="0.1" position="-1.5 -0.3 2.5"></a-box>
+            <!-- dit zijn de ramen -->
+            <a-box color="white" height="2" width="3" depth="0.1" position="0.8 -0.1 2.5"></a-box>
+            <a-box color="white" height="2" width="4.5" depth="0.1" position="0 0.2 -2.5"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="-2.5 0.2 0"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="2.5 0.2 0"></a-box>
+          </a-entity>
+          <!-- de andere entity's zijn de andere verdiepingen -->
+          <a-entity position="0 3 0">
+            <!-- dit is wat je ziet aan de buitenkant -->
+            <a-box color="#248f24" height="3" width="5" depth="5"></a-box>
+            <!-- dit is de deur -->
+            <a-box color="#663300" height="2.5" width="1.25" depth="0.1" position="-1.5 0 2.5"></a-box>
+            <!-- dit zijn de ramen -->
+            <a-box color="white" height="2" width="3" depth="0.1" position="0.8 0.2 2.5"></a-box>
+            <a-box color="white" height="2" width="4.5" depth="0.1" position="0 0.2 -2.5"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="-2.5 0.2 0"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="2.5 0.2 0"></a-box>
+            <!-- dit is het balkon -->
+            <!-- dit is de ondergrond -->
+            <a-box color="#196619" height="0.2" width="5" depth="2" position="0 -1.4 3.5"></a-box>
+            <!-- dit zijn de staven -->
+            <a-cylinder color="#666666" height="1" radius="0.1" position='2.4 -0.8 4.4'></a-cylinder>
+            <a-cylinder color="#666666" height="1" radius="0.1" position='-2.4 -0.8 4.4'></a-cylinder>
+            <!-- dit zijn de balken -->
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="-2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="5" depth="0.2" position="0 -0.3 4.5"></a-box>
+          </a-entity>
+          <a-entity position="0 6 0">
+            <!-- dit is wat je ziet aan de buitenkant -->
+            <a-box color="#248f24" height="3" width="5" depth="5"></a-box>
+            <!-- dit is de deur -->
+            <a-box color="#663300" height="2.5" width="1.25" depth="0.1" position="-1.5 0 2.5"></a-box>
+            <!-- dit zijn de ramen -->
+            <a-box color="white" height="2" width="3" depth="0.1" position="0.8 0.2 2.5"></a-box>
+            <a-box color="white" height="2" width="4.5" depth="0.1" position="0 0.2 -2.5"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="-2.5 0.2 0"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="2.5 0.2 0"></a-box>
+            <!-- dit is het balkon -->
+            <!-- dit is de ondergrond -->
+            <a-box color="#196619" height="0.2" width="5" depth="2" position="0 -1.4 3.5"></a-box>
+            <!-- dit zijn de staven -->
+            <a-cylinder color="#666666" height="1" radius="0.1" position='2.4 -0.8 4.4'></a-cylinder>
+            <a-cylinder color="#666666" height="1" radius="0.1" position='-2.4 -0.8 4.4'></a-cylinder>
+            <!-- dit zijn de balken -->
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="-2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="5" depth="0.2" position="0 -0.3 4.5"></a-box>
+          </a-entity>
+          <a-entity position="0 9 0">
+            <!-- dit is wat je ziet aan de buitenkant -->
+            <a-box color="#248f24" height="3" width="5" depth="5"></a-box>
+            <!-- dit is de deur -->
+            <a-box color="#663300" height="2.5" width="1.25" depth="0.1" position="-1.5 0 2.5"></a-box>
+            <!-- dit zijn de ramen -->
+            <a-box color="white" height="2" width="3" depth="0.1" position="0.8 0.2 2.5"></a-box>
+            <a-box color="white" height="2" width="4.5" depth="0.1" position="0 0.2 -2.5"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="-2.5 0.2 0"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="2.5 0.2 0"></a-box>
+            <!-- dit is het balkon -->
+            <!-- dit is de ondergrond -->
+            <a-box color="#196619" height="0.2" width="5" depth="2" position="0 -1.4 3.5"></a-box>
+            <!-- dit zijn de staven -->
+            <a-cylinder color="#666666" height="1" radius="0.1" position='2.4 -0.8 4.4'></a-cylinder>
+            <a-cylinder color="#666666" height="1" radius="0.1" position='-2.4 -0.8 4.4'></a-cylinder>
+            <!-- dit zijn de balken -->
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="-2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="5" depth="0.2" position="0 -0.3 4.5"></a-box>
+          </a-entity>
+          <a-entity position="0 12 0">
+            <!-- dit is wat je ziet aan de buitenkant -->
+            <a-box color="#248f24" height="3" width="5" depth="5"></a-box>
+            <!-- dit is de deur -->
+            <a-box color="#663300" height="2.5" width="1.25" depth="0.1" position="-1.5 0 2.5"></a-box>
+            <!-- dit zijn de ramen -->
+            <a-box color="white" height="2" width="3" depth="0.1" position="0.8 0.2 2.5"></a-box>
+            <a-box color="white" height="2" width="4.5" depth="0.1" position="0 0.2 -2.5"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="-2.5 0.2 0"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="2.5 0.2 0"></a-box>
+            <!-- dit is het balkon -->
+            <!-- dit is de ondergrond -->
+            <a-box color="#196619" height="0.2" width="5" depth="2" position="0 -1.4 3.5"></a-box>
+            <!-- dit zijn de staven -->
+            <a-cylinder color="#666666" height="1" radius="0.1" position='2.4 -0.8 4.4'></a-cylinder>
+            <a-cylinder color="#666666" height="1" radius="0.1" position='-2.4 -0.8 4.4'></a-cylinder>
+            <!-- dit zijn de balken -->
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="-2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="5" depth="0.2" position="0 -0.3 4.5"></a-box>
+          </a-entity>
+          <a-entity position="0 15 0">
+            <!-- dit is wat je ziet aan de buitenkant -->
+            <a-box color="#248f24" height="3" width="5" depth="5"></a-box>
+            <!-- dit is de deur -->
+            <a-box color="#663300" height="2.5" width="1.25" depth="0.1" position="-1.5 0 2.5"></a-box>
+            <!-- dit zijn de ramen -->
+            <a-box color="white" height="2" width="3" depth="0.1" position="0.8 0.2 2.5"></a-box>
+            <a-box color="white" height="2" width="4.5" depth="0.1" position="0 0.2 -2.5"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="-2.5 0.2 0"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="2.5 0.2 0"></a-box>
+            <!-- dit is het balkon -->
+            <!-- dit is de ondergrond -->
+            <a-box color="#196619" height="0.2" width="5" depth="2" position="0 -1.4 3.5"></a-box>
+            <!-- dit zijn de staven -->
+            <a-cylinder color="#666666" height="1" radius="0.1" position='2.4 -0.8 4.4'></a-cylinder>
+            <a-cylinder color="#666666" height="1" radius="0.1" position='-2.4 -0.8 4.4'></a-cylinder>
+            <!-- dit zijn de balken -->
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="-2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="5" depth="0.2" position="0 -0.3 4.5"></a-box>
+          </a-entity>
+          <a-entity position="0 18 0">
+            <!-- dit is wat je ziet aan de buitenkant -->
+            <a-box color="#248f24" height="3" width="5" depth="5"></a-box>
+            <!-- dit is de deur -->
+            <a-box color="#663300" height="2.5" width="1.25" depth="0.1" position="-1.5 0 2.5"></a-box>
+            <!-- dit zijn de ramen -->
+            <a-box color="white" height="2" width="3" depth="0.1" position="0.8 0.2 2.5"></a-box>
+            <a-box color="white" height="2" width="4.5" depth="0.1" position="0 0.2 -2.5"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="-2.5 0.2 0"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="2.5 0.2 0"></a-box>
+            <!-- dit is het balkon -->
+            <!-- dit is de ondergrond -->
+            <a-box color="#196619" height="0.2" width="5" depth="2" position="0 -1.4 3.5"></a-box>
+            <!-- dit zijn de staven -->
+            <a-cylinder color="#666666" height="1" radius="0.1" position='2.4 -0.8 4.4'></a-cylinder>
+            <a-cylinder color="#666666" height="1" radius="0.1" position='-2.4 -0.8 4.4'></a-cylinder>
+            <!-- dit zijn de balken -->
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="-2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="5" depth="0.2" position="0 -0.3 4.5"></a-box>
+          </a-entity>
+          <a-entity position="0 21 0">
+            <!-- dit is wat je ziet aan de buitenkant -->
+            <a-box color="#248f24" height="3" width="5" depth="5"></a-box>
+            <!-- dit is de deur -->
+            <a-box color="#663300" height="2.5" width="1.25" depth="0.1" position="-1.5 0 2.5"></a-box>
+            <!-- dit zijn de ramen -->
+            <a-box color="white" height="2" width="3" depth="0.1" position="0.8 0.2 2.5"></a-box>
+            <a-box color="white" height="2" width="4.5" depth="0.1" position="0 0.2 -2.5"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="-2.5 0.2 0"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="2.5 0.2 0"></a-box>
+            <!-- dit is het balkon -->
+            <!-- dit is de ondergrond -->
+            <a-box color="#196619" height="0.2" width="5" depth="2" position="0 -1.4 3.5"></a-box>
+            <!-- dit zijn de staven -->
+            <a-cylinder color="#666666" height="1" radius="0.1" position='2.4 -0.8 4.4'></a-cylinder>
+            <a-cylinder color="#666666" height="1" radius="0.1" position='-2.4 -0.8 4.4'></a-cylinder>
+            <!-- dit zijn de balken -->
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="-2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="5" depth="0.2" position="0 -0.3 4.5"></a-box>
+          </a-entity>
+          <a-entity position="0 24 0">
+            <!-- dit is wat je ziet aan de buitenkant -->
+            <a-box color="#248f24" height="3" width="5" depth="5"></a-box>
+            <!-- dit is de deur -->
+            <a-box color="#663300" height="2.5" width="1.25" depth="0.1" position="-1.5 0 2.5"></a-box>
+            <!-- dit zijn de ramen -->
+            <a-box color="white" height="2" width="3" depth="0.1" position="0.8 0.2 2.5"></a-box>
+            <a-box color="white" height="2" width="4.5" depth="0.1" position="0 0.2 -2.5"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="-2.5 0.2 0"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="2.5 0.2 0"></a-box>
+            <!-- dit is het balkon -->
+            <!-- dit is de ondergrond -->
+            <a-box color="#196619" height="0.2" width="5" depth="2" position="0 -1.4 3.5"></a-box>
+            <!-- dit zijn de staven -->
+            <a-cylinder color="#666666" height="1" radius="0.1" position='2.4 -0.8 4.4'></a-cylinder>
+            <a-cylinder color="#666666" height="1" radius="0.1" position='-2.4 -0.8 4.4'></a-cylinder>
+            <!-- dit zijn de balken -->
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="-2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="5" depth="0.2" position="0 -0.3 4.5"></a-box>
+          </a-entity>
+          <a-entity position="0 27 0">
+            <!-- dit is wat je ziet aan de buitenkant -->
+            <a-box color="#248f24" height="3" width="5" depth="5"></a-box>
+            <!-- dit is de deur -->
+            <a-box color="#663300" height="2.5" width="1.25" depth="0.1" position="-1.5 0 2.5"></a-box>
+            <!-- dit zijn de ramen -->
+            <a-box color="white" height="2" width="3" depth="0.1" position="0.8 0.2 2.5"></a-box>
+            <a-box color="white" height="2" width="4.5" depth="0.1" position="0 0.2 -2.5"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="-2.5 0.2 0"></a-box>
+            <a-box color="white" height="2" width="0.1" depth="4.5" position="2.5 0.2 0"></a-box>
+            <!-- dit is het balkon -->
+            <!-- dit is de ondergrond -->
+            <a-box color="#196619" height="0.2" width="5" depth="2" position="0 -1.4 3.5"></a-box>
+            <!-- dit zijn de staven -->
+            <a-cylinder color="#666666" height="1" radius="0.1" position='2.4 -0.8 4.4'></a-cylinder>
+            <a-cylinder color="#666666" height="1" radius="0.1" position='-2.4 -0.8 4.4'></a-cylinder>
+            <!-- dit zijn de balken -->
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="-2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="0.2" depth="2" position="2.4 -0.3 3.5"></a-box>
+            <a-box color="#804000" height="0.1" width="5" depth="0.2" position="0 -0.3 4.5"></a-box>
+          </a-entity>
+        </a-entity>
+        <!-- dit zijn de bomen -->
+        <a-entity position="-20 0 -23">
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5">
+            <!-- dit zorgt ervoor dat de bladeren verdwijnen -->
+            <a-animation attribute="visible" to="false" begin="55000"></a-animation>
+          </a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-20 0 -21">
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5">
+            <!-- dit zorgt ervoor dat de bladeren verdwijnen -->
+            <a-animation attribute="visible" to="false" begin="55000"></a-animation>
+          </a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-18 0 -22">
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5">
+            <!-- dit zorgt ervoor dat de bladeren verdwijnen -->
+            <a-animation attribute="visible" to="false" begin="55000"></a-animation>
+          </a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-20 0 -23">
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5">
+            <!-- dit zorgt ervoor dat de bladeren verdwijnen -->
+            <a-animation attribute="visible" to="false" begin="55000"></a-animation>
+          </a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-20 0 23">
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5">
+            <!-- dit zorgt ervoor dat de bladeren verdwijnen -->
+            <a-animation attribute="visible" to="false" begin="55000"></a-animation>
+          </a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-20 0 21">
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5">
+            <!-- dit zorgt ervoor dat de bladeren verdwijnen -->
+            <a-animation attribute="visible" to="false" begin="55000"></a-animation>
+          </a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="-18 0 22">
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5">
+            <!-- dit zorgt ervoor dat de bladeren verdwijnen -->
+            <a-animation attribute="visible" to="false" begin="55000"></a-animation>
+          </a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="20 0 23">
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5">
+            <!-- dit zorgt ervoor dat de bladeren verdwijnen -->
+            <a-animation attribute="visible" to="false" begin="55000"></a-animation>
+          </a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="20 0 21">
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5">
+            <!-- dit zorgt ervoor dat de bladeren verdwijnen -->
+            <a-animation attribute="visible" to="false" begin="55000"></a-animation>
+          </a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+        <a-entity position="18 0 22">
+          <!-- dit is de stam -->
+          <a-cylinder color="brown" height="3" radius="0.5">
+            <!-- dit zorgt ervoor dat de bladeren verdwijnen -->
+            <a-animation attribute="visible" to="false" begin="55000"></a-animation>
+          </a-cilinder>
+          <!-- dit zijn de balderen -->
+          <a-sphere color="green" radius="2" position="0 3.5 0"></a-sphere>
+        </a-entity>
+      </a-entity>
+
+      <!-- dit is de trein en het spoor -->
+      <a-entity>
+        <!-- dit is het spoor -->
+        <a-entity>
+          <a-box color="#1a1a1a" width="3.5" depth="100" height="1" position="-45 0 0"></a-box>
+        </a-entity>
+        <!-- dit is de trein -->
+        <a-entity position="-45 1.5 -50" rotation="0 0 0" visible="false">
+          <!-- dit zorgt ervoor dat de trein verschijnt -->
+          <a-animation attribute="visible" to="true" begin="30000"></a-animation>
+          <!-- dit zorgt ervoor dat de trein beweegt -->
+          <a-animation attribute="position" to="-45 1.5 50" begin="30000" dur="25000"></a-animation>
+          <!-- dit entity is het voorstuk van de trein -->
+          <a-entity>
+            <!-- dit is het grote stuk dat je ziet -->
+            <a-box color="#ff5c33" width="3" depth="4" height="2"></a-box>
+            <!-- dit zijn de wielen aan de rechterkant -->
+            <a-entity rotation="0 0 90" position="-1.5 0 0">
+              <!-- elk entity is een wiel -->
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 -1.5"></a-cylinder>
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 1.5"></a-cylinder>
+            </a-entity>
+            <!-- dit zijn de wielen die je ziet aan de linkerkant -->
+            <a-entity rotation="0 0 90" position="1.5 0 0">
+              <!-- elk entity is een wiel -->
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 -1.5"></a-cylinder>
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 1.5"></a-cylinder>
+            </a-entity>
+            <!-- dit zijn de ramen -->
+            <a-entity>
+              <a-box color="white" depth="1" height="0.75" width="0.1" position="1.5 0.5 -1.4"></a-box>
+              <a-box color="white" depth="1" height="0.75" width="0.1" position="-1.5 0.5 -1.4"></a-box>
+            </a-entity>
+            <!-- dit is de schoorsteen -->
+            <a-box color="#8c8c8c" height="2" width="0.5" depth="0.5" position="0 2 1.5"></a-box>
+            <!-- dit is de rook die uit de schoorsteen komt -->
+            <a-entity position="0 3.5 1.5">
+              <!-- elke sphere is een rookpluim -->
+              <a-sphere color="#cccccc" radius="0.5" position="0 0 0"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.5" position="0 0.2 -0.1"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.5" position="0 0.4 -0.2"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.5" position="0 0.6 -0.3"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.5" position="0 0.8 -0.4"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.5" position="0 1.0 -0.5"></a-sphere>
+            </a-entity>
+          </a-entity>
+
+          <!-- elk entity is een wagon -->
+          <a-entity position="0 0 -4.5">
+            <!-- dit is het grote stuk dat je ziet -->
+            <a-box color="#ff5c33" width="3" depth="4" height="2"></a-box>
+            <!-- dit zijn de wielen aan de rechterkant -->
+            <a-entity rotation="0 0 90" position="-1.5 0 0">
+              <!-- elk entity is een wiel -->
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 -1.5"></a-cylinder>
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 1.5"></a-cylinder>
+            </a-entity>
+            <!-- dit zijn de wielen die je ziet aan de linkerkant -->
+            <a-entity rotation="0 0 90" position="1.5 0 0">
+              <!-- elk entity is een wiel -->
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 -1.5"></a-cylinder>
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 1.5"></a-cylinder>
+            </a-entity>
+            <!-- dit zijn de ramen -->
+            <a-entity>
+              <a-box color="white" depth="3.5" height="1" width="0.1" position="1.5 0.4 0"></a-box>
+              <a-box color="white" depth="3.5" height="1" width="0.1" position="-1.5 0.4 0"></a-box>
+            </a-entity>
+          </a-entity>
+          <a-entity position="0 0 -9">
+            <!-- dit is het grote stuk dat je ziet -->
+            <a-box color="#ff5c33" width="3" depth="4" height="2"></a-box>
+            <!-- dit zijn de wielen aan de rechterkant -->
+            <a-entity rotation="0 0 90" position="-1.5 0 0">
+              <!-- elk entity is een wiel -->
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 -1.5"></a-cylinder>
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 1.5"></a-cylinder>
+            </a-entity>
+            <!-- dit zijn de wielen die je ziet aan de linkerkant -->
+            <a-entity rotation="0 0 90" position="1.5 0 0">
+              <!-- elk entity is een wiel -->
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 -1.5"></a-cylinder>
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 1.5"></a-cylinder>
+            </a-entity>
+            <!-- dit zijn de ramen -->
+            <a-entity>
+              <a-box color="white" depth="3.5" height="1" width="0.1" position="1.5 0.4 0"></a-box>
+              <a-box color="white" depth="3.5" height="1" width="0.1" position="-1.5 0.4 0"></a-box>
+            </a-entity>
+          </a-entity>
+          <a-entity position="0 0 -13.5">
+            <!-- dit is het grote stuk dat je ziet -->
+            <a-box color="#ff5c33" width="3" depth="4" height="2"></a-box>
+            <!-- dit zijn de wielen aan de rechterkant -->
+            <a-entity rotation="0 0 90" position="-1.5 0 0">
+              <!-- elk entity is een wiel -->
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 -1.5"></a-cylinder>
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 1.5"></a-cylinder>
+            </a-entity>
+            <!-- dit zijn de wielen die je ziet aan de linkerkant -->
+            <a-entity rotation="0 0 90" position="1.5 0 0">
+              <!-- elk entity is een wiel -->
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 -1.5"></a-cylinder>
+              <a-cylinder color="#8c8c8c" height="0.2" radius="0.5" position="-1 0 1.5"></a-cylinder>
+            </a-entity>
+            <!-- dit zijn de ramen -->
+            <a-entity>
+              <a-box color="white" depth="3.5" height="1" width="0.1" position="1.5 0.4 0"></a-box>
+              <a-box color="white" depth="3.5" height="1" width="0.1" position="-1.5 0.4 0"></a-box>
+            </a-entity>
+          </a-entity>
+        </a-entity>
+      </a-entity>
+
+      <!-- dit zijn de fabrieken -->
+      <a-entity position="0 2 0">
+        <!-- elke entity is een fabriek -->
+        <a-entity position="16 0 -12" rotation="0 -45 0" visible="false">
+          <!-- dit zorgt ervoor dat de fabriek later zichtbaar wordt -->
+          <a-animation attribute="visible" begin="35000" to="true"></a-animation>
+          <!-- dit zorgt ervoor dat hij uit de grond opgroeit -->
+          <a-animation attribute="position" begin="35000" from="16 -12 -12" to="16 0 -12" dur="1500"></a-animation>
+          <!-- dit is het gebouw zelf -->
+          <a-box color="#333333" height="4" width="5" depth="7"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#1a1a1a" height="2.5" width="2.5" depth="0.1" position="0 -0.7 3.5"></a-box>
+          <!-- dit zijn de ramen aan de rechterkant -->
+          <a-entity position="2.5 1.35 0">
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -2.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -1.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.9"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.1"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 0.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 1.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 2.3"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 3.1"></a-box>
+          </a-entity>
+          <!-- dit zijn de ramen aan de linkerkant -->
+          <a-entity position="-2.5 1.35 0">
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -2.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -1.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.9"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.1"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 0.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 1.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 2.3"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 3.1"></a-box>
+          </a-entity>
+          <!-- dit zijn de schoorstenen -->
+          <a-entity>
+            <a-cylinder color="#333333" height="3" radius="0.5" position="0 3.5 1"></a-cylinder>
+            <a-cylinder color="#333333" height="3" radius="0.5" position="0 3.5 -3"></a-cylinder>
+          </a-entity>
+          <!-- dit zijn de rookpluimen -->
+          <a-entity>
+            <!-- dit zijn de rookpluimen voor de voorste schoorsteen -->
+            <a-entity position="0 5.5 1">
+              <!-- elke sphere is een rookpluim -->
+              <a-sphere color="#cccccc" radius="0.6" position="0 0 0"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.2 -0.1"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.4 -0.2"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.6 -0.3"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.8 -0.4"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.0 -0.5"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.2 -0.6"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.4 -0.7"></a-sphere>
+            </a-entity>
+            <!-- dit zijn de rookpluimen voor de achterste schoorsteen -->
+            <a-entity position="0 5.5 -3">
+              <!-- elke sphere is een rookpluim -->
+              <a-sphere color="#cccccc" radius="0.6" position="0 0 0"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.2 -0.1"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.4 -0.2"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.6 -0.3"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.8 -0.4"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.0 -0.5"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.2 -0.6"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.4 -0.7"></a-sphere>
+            </a-entity>
+          </a-entity>
+        </a-entity>
+        <a-entity position="16 0 12" rotation="0 -90 0" visible="false">
+          <!-- dit zorgt ervoor dat de fabriek later zichtbaar wordt -->
+          <a-animation attribute="visible" begin="40000" to="true"></a-animation>
+          <!-- dit zorgt ervoor dat hij uit de grond opgroeit -->
+          <a-animation attribute="position" begin="40000" from="16 -12 12" to="16 0 12" dur="1500"></a-animation>
+          <!-- dit is het gebouw zelf -->
+          <a-box color="#333333" height="4" width="5" depth="7"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#1a1a1a" height="2.5" width="2.5" depth="0.1" position="0 -0.7 3.5"></a-box>
+          <!-- dit zijn de ramen aan de rechterkant -->
+          <a-entity position="2.5 1.35 0">
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -2.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -1.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.9"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.1"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 0.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 1.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 2.3"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 3.1"></a-box>
+          </a-entity>
+          <!-- dit zijn de ramen aan de linkerkant -->
+          <a-entity position="-2.5 1.35 0">
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -2.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -1.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.9"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.1"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 0.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 1.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 2.3"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 3.1"></a-box>
+          </a-entity>
+          <!-- dit zijn de schoorstenen -->
+          <a-entity>
+            <a-cylinder color="#333333" height="3" radius="0.5" position="0 3.5 1"></a-cylinder>
+            <a-cylinder color="#333333" height="3" radius="0.5" position="0 3.5 -3"></a-cylinder>
+          </a-entity>
+          <!-- dit zijn de rookpluimen -->
+          <a-entity>
+            <!-- dit zijn de rookpluimen voor de voorste schoorsteen -->
+            <a-entity position="0 5.5 1">
+              <!-- elke sphere is een rookpluim -->
+              <a-sphere color="#cccccc" radius="0.6" position="0 0 0"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.2 -0.1"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.4 -0.2"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.6 -0.3"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.8 -0.4"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.0 -0.5"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.2 -0.6"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.4 -0.7"></a-sphere>
+            </a-entity>
+            <!-- dit zijn de rookpluimen voor de achterste schoorsteen -->
+            <a-entity position="0 5.5 -3">
+              <!-- elke sphere is een rookpluim -->
+              <a-sphere color="#cccccc" radius="0.6" position="0 0 0"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.2 -0.1"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.4 -0.2"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.6 -0.3"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.8 -0.4"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.0 -0.5"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.2 -0.6"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.4 -0.7"></a-sphere>
+            </a-entity>
+          </a-entity>
+        </a-entity>
+        <a-entity position="-16 0 12" rotation="0 180 0" visible="false">
+          <!-- dit zorgt ervoor dat de fabriek later zichtbaar wordt -->
+          <a-animation attribute="visible" begin="45000" to="true"></a-animation>
+          <!-- dit zorgt ervoor dat hij uit de grond opgroeit -->
+          <a-animation attribute="position" begin="45000" from="-16 -12 12" to="-16 0 12" dur="1500"></a-animation>
+          <!-- dit is het gebouw zelf -->
+          <a-box color="#333333" height="4" width="5" depth="7"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#1a1a1a" height="2.5" width="2.5" depth="0.1" position="0 -0.7 3.5"></a-box>
+          <!-- dit zijn de ramen aan de rechterkant -->
+          <a-entity position="2.5 1.35 0">
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -2.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -1.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.9"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.1"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 0.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 1.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 2.3"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 3.1"></a-box>
+          </a-entity>
+          <!-- dit zijn de ramen aan de linkerkant -->
+          <a-entity position="-2.5 1.35 0">
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -2.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -1.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.9"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.1"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 0.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 1.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 2.3"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 3.1"></a-box>
+          </a-entity>
+          <!-- dit zijn de schoorstenen -->
+          <a-entity>
+            <a-cylinder color="#333333" height="3" radius="0.5" position="0 3.5 1"></a-cylinder>
+            <a-cylinder color="#333333" height="3" radius="0.5" position="0 3.5 -3"></a-cylinder>
+          </a-entity>
+          <!-- dit zijn de rookpluimen -->
+          <a-entity>
+            <!-- dit zijn de rookpluimen voor de voorste schoorsteen -->
+            <a-entity position="0 5.5 1">
+              <!-- elke sphere is een rookpluim -->
+              <a-sphere color="#cccccc" radius="0.6" position="0 0 0"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.2 -0.1"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.4 -0.2"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.6 -0.3"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.8 -0.4"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.0 -0.5"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.2 -0.6"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.4 -0.7"></a-sphere>
+
+            </a-entity>
+            <!-- dit zijn de rookpluimen voor de achterste schoorsteen -->
+            <a-entity position="0 5.5 -3">
+              <!-- elke sphere is een rookpluim -->
+              <a-sphere color="#cccccc" radius="0.6" position="0 0 0"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.2 -0.1"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.4 -0.2"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.6 -0.3"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.8 -0.4"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.0 -0.5"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.2 -0.6"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.4 -0.7"></a-sphere>
+            </a-entity>
+          </a-entity>
+        </a-entity>
+        <a-entity position="-16 0 -8" rotation="0 100 0" visible="false">
+          <!-- dit zorgt ervoor dat de fabriek later zichtbaar wordt -->
+          <a-animation attribute="visible" begin="50000" to="true"></a-animation>
+          <!-- dit zorgt ervoor dat hij uit de grond opgroeit -->
+          <a-animation attribute="position" begin="50000" from="-16 -12 -8" to="-16 0 -8" dur="1500"></a-animation>
+          <!-- dit is het gebouw zelf -->
+          <a-box color="#333333" height="4" width="5" depth="7"></a-box>
+          <!-- dit is de deur -->
+          <a-box color="#1a1a1a" height="2.5" width="2.5" depth="0.1" position="0 -0.7 3.5"></a-box>
+          <!-- dit zijn de ramen aan de rechterkant -->
+          <a-entity position="2.5 1.35 0">
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -2.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -1.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.9"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.1"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 0.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 1.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 2.3"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 3.1"></a-box>
+          </a-entity>
+          <!-- dit zijn de ramen aan de linkerkant -->
+          <a-entity position="-2.5 1.35 0">
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -2.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -1.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.9"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 -0.1"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 0.7"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 1.5"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 2.3"></a-box>
+            <a-box color="#1a1a1a" height="1" width="0.1" depth="0.6" position="0 0 3.1"></a-box>
+          </a-entity>
+          <!-- dit zijn de schoorstenen -->
+          <a-entity>
+            <a-cylinder color="#333333" height="3" radius="0.5" position="0 3.5 1"></a-cylinder>
+            <a-cylinder color="#333333" height="3" radius="0.5" position="0 3.5 -3"></a-cylinder>
+          </a-entity>
+          <!-- dit zijn de rookpluimen -->
+          <a-entity>
+            <!-- dit zijn de rookpluimen voor de voorste schoorsteen -->
+            <a-entity position="0 5.5 1">
+              <!-- elke sphere is een rookpluim -->
+              <a-sphere color="#cccccc" radius="0.6" position="0 0 0"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.2 -0.1"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.4 -0.2"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.6 -0.3"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.8 -0.4"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.0 -0.5"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.2 -0.6"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.4 -0.7"></a-sphere>
+
+            </a-entity>
+            <!-- dit zijn de rookpluimen voor de achterste schoorsteen -->
+            <a-entity position="0 5.5 -3">
+              <!-- elke sphere is een rookpluim -->
+              <a-sphere color="#cccccc" radius="0.6" position="0 0 0"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.2 -0.1"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.4 -0.2"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.6 -0.3"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 0.8 -0.4"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.0 -0.5"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.2 -0.6"></a-sphere>
+              <a-sphere color="#cccccc" radius="0.6" position="0 1.4 -0.7"></a-sphere>
+            </a-entity>
+          </a-entity>
+        </a-entity>
+      </a-entity>
+
+      <!-- dit is de vloedstroom die aankomt -->
+      <a-entity visible="false">
+        <!-- dit zorgt ervoor dat je de vloedgolf ziet -->
+        <a-animation attribute="visible" to="true" begin="60000"></a-animation>
+        <!-- dit is de vloedgolf -->
+        <a-box color="#00b8e6" width="100" depth="100" height='50' position="-100 0 0">>
+          <!-- dit zorgt ervoor dat de golf op je afkomt -->
+          <a-animation attribute="position" to="0 0 0" begin="1000" dur='10000'></a-animation>
+        </a-box>
+      </a-entity>
+
+      <!-- dit is de einde tekst -->
+      <a-entity position="-12 2 0" rotation='0 90 0' visible="false">
+        <!-- dit zorgt ervoor dat de animatie op het einde zichtbaar is -->
+        <a-animation attribute="visible" to="true" begin="65000"></a-animation>
+        <!-- dit zorgt ervoor dat de tekst omhoog gaat -->
+        <a-animation attribute="position" from="-12 -5 0" to="-12 2 0" begin="1000" dur="5000"></a-animation>
+        <!-- de lettter T -->
+        <a-entity position="-19 0 0">
+          <a-box color="black" height='5' width='2' depth="0.2" position="0 0 0"></a-box>
+          <a-box color="black" height='2' width='6' depth="0.2" position="0 3.5 0"></a-box>
+        </a-entity>
+        <!-- de lettter H -->
+        <a-entity position='-12 0 0'>
+          <a-box color="black" height='7' width='2' depth='0.2' position='2 1 0'></a-box>
+          <a-box color="black" height='7' width='2' depth='0.2' position='-2 1 0'></a-box>
+          <a-box color="black" height='2' width='2' depth='0.2' position='0 1 0'></a-box>
+        </a-entity>
+        <!-- de lettter E -->
+        <a-entity position="-5 0 0">
+          <a-box color="black" height='7' width='2' depth='0.2' position='-2 1 0'></a-box>
+          <a-box color="black" height='1.5' width='3' depth='0.2' position='0 3.75 0'></a-box>
+          <a-box color="black" height='1.5' width='2' depth='0.2' position='0 1.5 0'></a-box>
+          <a-box color="black" height='1.5' width='3' depth='0.2' position='0 -1.5 0'></a-box>
+        </a-entity>
+        <!-- de lettter E -->
+        <a-entity position="5 0 0">
+          <a-box color="black" height='7' width='2' depth='0.2' position='-2 1 0'></a-box>
+          <a-box color="black" height='1.5' width='3' depth='0.2' position='0 3.75 0'></a-box>
+          <a-box color="black" height='1.5' width='2' depth='0.2' position='0 1.5 0'></a-box>
+          <a-box color="black" height='1.5' width='3' depth='0.2' position='0 -1.5 0'></a-box>
+        </a-entity>
+        <!-- de lettter N-->
+        <a-entity position='11 0 0'>
+          <a-box color="black" height='7' width='2' depth='0.2' position='-2 1 0'></a-box>
+          <a-box color="black" height='7' width='2' depth='0.2' position='2 1 0'></a-box>
+          <a-box color="black" height='7' width='2' depth='0.2' position='0 1 0' rotation='0 0 30'></a-box>
+        </a-entity>
+        <!-- de lettter D -->
+        <a-entity position="18">
+          <a-box color="black" height='7' width='2' depth='0.2' position='-2 1 0'></a-box>
+          <a-box color="black" height='4' width='2' depth='0.2' position='2 1 0'></a-box>
+          <a-box color="black" height='5' width='2' depth='0.2' position='0 3 0' rotation="0 0 70"></a-box>
+          <a-box color="black" height='5' width='2' depth='0.2' position='0 -1 0' rotation="0 0 110"></a-box>
+        </a-entity>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
